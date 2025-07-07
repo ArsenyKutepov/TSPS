@@ -1,0 +1,29 @@
+{
+  "template_id": "minobr_2025",
+  "description": "Шаблон по требованиям Минобрнауки РФ",
+  "weights": {
+    "technical": 0.6,
+    "cognitive": 0.3,
+    "personal": 0.1
+  },
+  "indicators": [
+    "infrastructure",
+    "automation_level",
+    "data_security",
+    "staff_competencies"
+  ],
+  "rules": [
+    {
+      "condition": "technical['high'] & cognitive['high']",
+      "result": "maturity['level3']"
+    },
+    {
+      "condition": "technical['medium'] | cognitive['medium']",
+      "result": "maturity['level2']"
+    },
+    {
+      "condition": "technical['low'] & cognitive['low']",
+      "result": "maturity['level1']"
+    }
+  ]
+}
