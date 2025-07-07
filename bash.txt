@@ -1,0 +1,10 @@
+curl -X POST "http://localhost:8000/roadmap" \
+-H "Content-Type: application/json" \
+-d '{
+  "metrics": {
+    "technical": 2.7,
+    "cognitive": 1.2,
+    "personal": 0.8,
+    "data_security": 1.1
+  }
+}'
